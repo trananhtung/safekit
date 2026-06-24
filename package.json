@@ -1,5 +1,5 @@
 {
-  "name": "safekit",
+  "name": "@billdaddy/safekit",
   "version": "0.1.0",
   "description": "Zero-dependency Try monad for TypeScript. Capture exceptions as values — Try.of(() => risky()).map().recover().getOrElse(). Port of Java Vavr Try / Scala util.Try.",
   "type": "module",

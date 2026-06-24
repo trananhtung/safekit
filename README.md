@@ -5,7 +5,7 @@
 > Zero-dependency Try monad for TypeScript.
 > Execute risky code and handle exceptions as values, not control flow.
 
-[![npm](https://img.shields.io/npm/v/safekit)](https://www.npmjs.com/package/safekit)
+[![npm](https://img.shields.io/npm/v/@billdaddy/safekit)](https://www.npmjs.com/package/@billdaddy/safekit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Port of Java [Vavr Try](https://docs.vavr.io/#_try) / Scala [`scala.util.Try`](https://www.scala-lang.org/api/current/scala/util/Try.html). The existing `try-monad` npm package has been abandoned since 2017 (2 downloads/week).
@@ -13,7 +13,7 @@ Port of Java [Vavr Try](https://docs.vavr.io/#_try) / Scala [`scala.util.Try`](h
 ## Install
 
 ```bash
-npm install safekit
+npm install @billdaddy/safekit
 ```
 
 ## The problem Try solves
@@ -31,7 +31,7 @@ const t = Try.of(() => JSON.parse(rawJson));  // SyntaxError captured if thrown
 ## Quick start
 
 ```typescript
-import { Try } from "safekit";
+import { Try } from "@billdaddy/safekit";
 
 const result = Try.of(() => JSON.parse(rawInput))
   .map(obj => obj.name as string)   // skipped if parse failed
@@ -150,7 +150,7 @@ if (t.isSuccess()) {
 ### instanceof narrowing
 
 ```typescript
-import { Try, Success, Failure } from "safekit";
+import { Try, Success, Failure } from "@billdaddy/safekit";
 
 const t = Try.of(() => 42);
 if (t instanceof Success) {
